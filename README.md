@@ -1,1 +1,3 @@
 # ORM
+
+In this assignment, I was tasked to build the back end for an e-commerce site. Unfortunately, I haven't been able to get it to work. I had previously made my own code using my own files which was working 50% but I realized halfway through that I needed to use the starter code. I completely missed that and went ahead and cloned the starter code but every change I did either was in a error or wasn't recognized. I will seek assistance from a professor and tutor on this so I understand what went wrong. This area of back end is proving to be very challenging for me and I apologize. I'm trying to understand and do better. I'm spending extra time watching videos to learn more about the area we are currently working on in the class. 

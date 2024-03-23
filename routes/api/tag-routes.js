@@ -47,11 +47,45 @@ router.post('/', async (req, res) => {
 // Update a tag by id
 router.put('/:id', async (req, res) => {
   // Add logic to update a tag by its id
+  try {
+    const updatedTag = await Tag.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!updatedTag) {
+      return res.status(404).json({ error: 'Tag not found.' });
+    }
+
+    res.status(200).json(updatedTag);
+    
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 // Delete a tag by id
 router.delete('/:id', async (req, res) => {
   // Add logic to delete a tag by its id
+  try {
+    const deletedTag = await Tag.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!deletedTag) {
+      return res.status(404).json({ error: 'Tag not found.' });
+    }
+
+    res.status(200).json(deletedTag);
+    
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 module.exports = router;
